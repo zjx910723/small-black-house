@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+
+        html,body {
+            width: 100%;
+            height: 100%;
+        }
+
+        header.cancellation {
+            width: 100%;
+            height: 1.86rem;
+            text-align: center;
+            box-sizing: border-box;
+            border-bottom: 2px solid #07ca61;
+            position: relative;
+            color: #333;
+            font: 0.76rem/1.82rem 'HiraginSansGB W3';
+        }
+
+        .cancellation .back-button {
+            position: absolute;
+            width: 1.24rem;
+            height: 1.82rem;
+            left: 0;
+            top: 0;
+            border: 0;
+            outline: none;
+            background: url('img/icon-back.png') no-repeat center center #fff;
+
+        }
+        main {
+
+        }
+        main .tips {
+            background: #f88266;
+            padding: 0.48rem 1rem;
+            text-align: center;
+        }
+        main .tips p {
+            font: 0.48rem/0.72rem 'HiraginSansGB W3';
+            color: #fff;
+        }
+        main .content {
+          
+        }
+        main .content .reason {
+            text-align: center;
+            padding: 0.96rem 0.4rem;
+            border-bottom: 1px solid #dadada;
+        }
+        main .content .reason p {
+            font: 0.76rem 'HiraginSansGB W3';
+            color: #333;
+        }
+        main .content .reason span {
+            font: 0.56rem 'HiraginSansGB W3';
+            color: #07ca61;
+        }
+        main .content .selection {
+            padding: 0 0.4rem;
+        }
+        main .content .selection ul li {
+            padding: 0.68rem 0;
+            font: 0.64rem 'HiraginSansGB W3';
+            overflow: hidden;
+            border-bottom: 1px solid #dadada;   
+        }
+        main .content .selection ul li input {
+            float: right;
+            display: none;
+        }
+        main .content .selection ul li span {
+            float: right;
+            display: inline-block;
+            width: 0.8rem;
+            height: 0.8rem;
+            border-radius: 50%;
+            background: url(img/select02.png) no-repeat center center;
+        }
+        main .content .selection ul li input[type='radio']:checked+span {
+            background-image: url(img/select.png);
+        }
+        main .content .submit {
+            background: #07ca61;
+            margin-top: 1.6rem;
+            text-align: center;
+            line-height: 0.64rem;
+            border-radius: 3px; 
+        }
+        main .content .submit button {
+            border: 0;
+            outline: none;
+            background: none;
+            font: 0.64rem 'HiraginSansGB W3';
+            color: #fff;
+            padding: 0.64rem 0;
+        }
+    </style>
+    <script src="js/mobile.js"></script>
+</head>
+<body>
+
+    <header class="cancellation">
+        <button class="back-button"></button>
+        取消订单
+    </header>
+    <main>
+        <div class="tips">
+            <p>若单日取消订单达到3次，账户将会被冻结1天，请谨慎取消! 您当日已取消 2 次</p>
+        </div>
+        <div class="content">
+            <div class="reason">
+                <p>请您真实告诉我们取消原因</p>
+                <span>我们会努力为您提供更好的服务</span>
+            </div>
+            <div class="selection">
+                <ul>
+                    <li>
+                        <label for="aa">司机离我太远
+                            <input type="radio" name="cancle" hidden value="1" id="aa" />
+                            <span></span>
+                        </label>
+                        
+                    </li>
+                    <li>
+                        <label for="bb">下错单或重复下单
+                            <input type="radio"  name="cancle" hidden value="2" id="bb" />
+                            <span></span>
+                        </label>
+                        
+                    </li>
+                    <li>
+                        <label for="cc">暂时不需要车
+                            <input type="radio"  name="cancle" hidden value="3" id="cc" />
+                            <span></span>
+                        </label>
+                        
+                    </li>
+                    <li>
+                        <label for="dd">司机让我取消订单
+                            <input type="radio"  name="cancle" hidden value="4" id="dd" />
+                            <span></span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+           <div class="submit">
+                <button>提交</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

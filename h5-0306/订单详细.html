@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        img {
+            display: block;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        em,i {
+            font-style: normal;
+        }
+
+        html,body {
+            width: 100%;
+            height: 100%;
+        }
+
+        header.yhq-header {
+            width: 100%;
+            height: 1.86rem;
+            text-align: center;
+            box-sizing: border-box;
+            border-bottom: 2px solid #07ca61;
+            position: relative;
+            color: #333;
+            font: 0.76rem/1.82rem 'HiraginSansGB W3';
+        }
+
+        .yhq-header .back-button {
+            position: absolute;
+            width: 1.24rem;
+            height: 1.82rem;
+            left: 0;
+            top: 0;
+            border: 0;
+            outline: none;
+            background: url('img/icon-back.png') no-repeat center center #fff;
+            cursor: pointer;
+
+        }
+        .yhq-header .delete-button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: 0;
+            outline: none;
+            background: none;
+            font: 0.56rem/1.82rem 'HiraginSansGB W3';
+            color: #6a6a6a;
+            padding-right: 0.4rem;
+            cursor: pointer;
+
+        }
+        main.main {
+            background: #ebebeb;
+        }
+        main .time-out {
+            padding: 0.4rem 0.4rem;
+            text-align: center;
+            background:#fff;
+            overflow: hidden;
+        }
+        main .time-out p {
+            font: 0.64rem 'HiraginSansGB W3';
+            color: #333;
+        }
+        main .time-out span {
+            font: 0.56rem 'HiraginSansGB W3';
+        }
+        main .time-out span i {
+            font-style: normal;
+            color: red;
+            padding-left: 0.5rem;
+        }
+        main .time-out .head-img {
+            float: left;
+        }
+        main .time-out .driver-infor {
+            float: left;
+            padding-left: 0.4rem;
+            
+        }
+        main .time-out .driver-infor span {
+            font: 0.64rem 'HiraginSansGB W3';
+            color: #333;
+            display: block;
+        }
+        main .time-out .driver-infor p {
+            font: 0.48rem 'HiraginSansGB W3';
+            color: #969696;
+            text-align: left;
+            margin-bottom: 0.16rem;
+        }
+        main .time-out .driver-infor .star {
+            overflow: hidden;
+            margin-bottom: 0.2rem;
+        }
+        main .time-out .driver-infor .star li {
+            float: left;
+        }
+        main .time-out .phone {
+            float: right;
+            margin-top: 0.2rem
+        }
+        main .infor {
+            margin-top: 0.4rem; 
+            padding: 0 0.4rem;
+            background: #fff;
+            overflow: hidden;
+        }
+        main .infor .time {
+            color: #969696;
+            border-bottom: 1px solid #dadada;
+        }
+        main .infor .time span {
+            display: inline-block;
+            font: 0.48rem/1.32rem 'HiraginSansGB W3'; 
+           
+        }
+        main .infor .time img {
+            float: left;
+            margin: 0.4rem 0.2rem 0 0;
+        }
+        main .infor .time em {
+            float: right;
+            margin-top: 0.5rem;
+            font: 0.48rem 'HiraginSansGB W3'; 
+        }
+
+        main .infor .detail ul li {
+            padding: 0.4rem 0;
+            border-bottom: 1px solid #dadada;
+            overflow: hidden;
+        }
+        main .infor .detail ul li h5 {
+            float: left;
+            font-weight: 500;
+            font: 0.64rem 'HiraginSansGB W3';
+            color: #969696;
+        }
+        main .infor .detail ul li div {
+            float: right;
+            font: 0.64rem 'HiraginSansGB W3';
+            color: #333333;
+        }
+        main .infor .detail ul li div span {
+            float: right;
+            color: #969696;
+        }
+         main .infor .total ul li {
+            padding: 0.4rem 0;
+            overflow: hidden;
+        }
+        main .infor .total ul li h5 {
+            float: left;
+            font-weight: 500;
+            font: 0.64rem 'HiraginSansGB W3';
+            color: #969696;
+        }
+        main .infor .total ul li div {
+            float: right;
+            font: 0.64rem 'HiraginSansGB W3';
+            color: #333333;
+        }
+        main .infor .total ul li:nth-child(4) span {
+            color: #f32f00;
+        }
+        main .infor .total ul li:nth-child(4) p img {
+            display: inline-block;
+            margin-left: 0.2rem;
+            cursor: pointer;
+        }
+        main .infor .total ul li:last-child h5 {
+            color: #333;
+        }
+        main .infor .total ul li:last-child p {
+            color: #f32f00;
+            font: 0.84rem '宋体'; 
+            font-weight: 900;
+        }
+        footer {
+            background: #ebebeb;
+            padding: 0 0.4rem;
+        }
+        footer .tips {
+            
+            padding: 0.24rem 1rem;
+        }
+        footer .tips span {
+            text-align: center;
+            display: inline-block;
+            font: 0.52rem/0.82rem 'HiraginSansGB W3';
+            color: #07ca61;
+        }
+        footer .cancel {
+            display: none;
+            background: #07ca61;
+            margin-top: 1.6rem;
+            text-align: center;
+            line-height: 0.64rem;
+            border-radius: 5px; 
+            margin-bottom: 0.4rem;
+            
+        }
+        footer .cancel button {
+            border: 0;
+            outline: none;
+            background: none;
+            font: 0.64rem 'HiraginSansGB W3';
+            color: #fff;
+            padding: 0.64rem 0;
+        }
+    </style>
+    <script src="js/mobile.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+
+    <header class="yhq-header">
+        <button class="back-button"></button>
+        订单详细
+        <button class="delete-button">取消订单</button>
+    </header>
+    <main class="main">
+        <div class="time-out">
+            <p>正在分配离您最近的司机，收藏司机优先推送哦~</p>
+            <span>已等候:<i>00:06</i></span>
+        </div>
+        <div class="time-out header-infor" style="display: none;">
+            <div class="head-img"><img src="img/head-img.png" alt="头像"></div>
+            <div class="driver-infor">
+                <span>张师傅 ● 粤B2360W</span>
+                <p>面包车</p>
+                <ul class="star">
+                    <li><img src="img/green-star.png" alt=""></li>
+                    <li><img src="img/green-star.png" alt=""></li>
+                    <li><img src="img/green-star.png" alt=""></li>
+                    <li><img src="img/green-star.png" alt=""></li>
+                    <li><img src="img/grey-star.png" alt=""></li>
+                </ul>
+            </div>
+            <a class="phone"><img src="img/phone.png" alt="电话"></a>
+        </div>
+        <div class="infor">
+            <div class="time">
+                <span><img src="img/time.png" alt="time"> 2016-10-24 18:00</span>
+                <em>等待分配司机</em>
+            </div>
+            <div class="detail">
+                <ul>
+                    <li>
+                        <h5>车型</h5>
+                        <div>
+                            <p>面包车</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>发货地</h5>
+                        <div>
+                            <p>中洲控股中心A座西门</p>
+                            <span>15913139061</span>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>收货地</h5>
+                        <div>
+                            <p>深圳北站西广场B2出口</p>
+                            <span>15913139061</span>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>出发时间</h5>
+                        <div>
+                            <p>2016-10-25 18:00</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>附加服务</h5>
+                        <div>
+                            <p>搬运，返程</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>备注</h5>
+                        <div>
+                            <p>请直接到收货点来收货，谢谢！</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="total">
+                <ul>
+                    <li>
+                        <h5>起步价</h5>
+                        <div>
+                            <p>33元</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>里程费（3.2公里）</h5>
+                        <div>
+                            <p>64元</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>返程费（5公里免费）</h5>
+                        <div>
+                            <p>0元</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>优惠券已抵扣 <span>￥<em>10</em></span></h5>
+                        <div>
+                            <p>切换优惠券<img src="img/more-icon.png" alt="more"></p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>合计</h5>
+                        <div>
+                            <p>￥<span>58</span></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="tips">
+            <span>温馨提示：离开本页后,您仍然可以在“我的订单”中 看到该订单的状态，并进行订单操作。</span>
+        </div>
+        <div class="cancel">
+            <button>取消订单</button>
+        </div>
+    </footer>
+    <script>
+        $(function(){
+            $('.delete-button').on('click',function(){
+                $('.header-infor').show();
+                $('.header-infor').siblings('.time-out').hide();
+
+
+                $('.cancel').show();
+                $('.cancel').siblings().hide();
+
+                $('.cancel').on('click',function(){
+
+                    window.location.href='取消订单.html';
+                   
+                })
+            })
+
+
+        })
+
+    </script>
+</body>
+</html>

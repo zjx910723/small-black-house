@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		html,body {
+			width: 100%;
+			height: 100%;
+		}
+		li {
+			list-style: none;
+		}
+		/*header.fzhd-header {
+			width: 100%;
+			height: 1.86rem;
+			text-align: right;
+			box-sizing: border-box;
+			font: 0.56rem/1.02rem 'HiraginSansGB W3';
+			background: url(img/方舟-log.png) no-repeat center center #fff;
+			border-bottom: 2px solid #07ca61;
+			color: #6a6a6a;
+			padding: 0.4rem;
+		}*/
+		header.fzhd-header {
+			width: 100%;
+			height: 6.08rem;
+			text-align: center;
+			box-sizing: border-box;
+			border-bottom: 1px solid #dadada;
+			color: #6a6a6a;
+			padding: 0.4rem 0.4rem 0;	
+			background: url(img/方舟-logo.png) no-repeat center center #ebebeb;
+		}
+		header.fzhd-header ul {
+			overflow: hidden;
+			padding-top: 3.18rem;
+			display: inline-block;
+		}
+		header.fzhd-header ul li {
+			float: left;
+			font: 0.48rem/0.48rem 'HiraginSansGB W3'; 
+			/*padding: 0 0.72rem 0;*/
+			border-right: 1px solid #6a6a6a; 
+			margin-top: 0.54rem;
+			letter-spacing: 0.25rem;
+
+		}
+		header.fzhd-header ul li:last-child {
+			border-right: 0; 
+			padding-left: 0.2rem;
+		}
+	
+		main {
+			padding: 0 0.4rem;
+		}
+		main .input-box ul li {
+			padding: 0.68rem 0;
+			border-bottom: 1px solid #dadada;
+			overflow: hidden;
+		}
+		main .input-box ul li span {
+			font: 0.64rem/0.6rem 'HiraginSansGB W3';
+			color: #969696;
+
+		}
+		main .input-box ul li input {
+			padding-left: 1.16rem;
+			border: 0;
+			outline: none;
+			background: none;
+			font: 0.64rem/0.6rem 'HiraginSansGB W3';
+		}
+		main .input-box ul li button {
+			border: 0;
+			outline: none;
+			background: none;
+			font: 0.64rem 'HiraginSansGB W3';
+			color: #07ca61;
+			margin-top: 0.3rem;
+			float: right;
+		}
+		main .agreement {
+			
+			padding-top: 0.36rem;
+		}
+		main .agreement p {
+			background: url(img/text.png) no-repeat left center;
+			font: 0.56rem 'HiraginSansGB W3';
+			color: #969696;
+			padding-left: 0.64rem;
+		}
+		main .agreement p mark {
+			background: none;
+			color: #07ca61;
+		}
+		main .sign-in {
+			background: #07ca61;
+			margin-top: 1.6rem;
+			text-align: center;
+			line-height: 0.64rem;
+			border-radius: 3px; 
+		}
+		main .sign-in button{
+			border: 0;
+			outline: none;
+			background: none;
+			font: 0.64rem 'HiraginSansGB W3';
+			color: #fff;
+			padding: 0.64rem 0;
+		}
+	</style>
+	<script type="text/javascript" src="js/mobile.js"></script>
+</head>
+<body>
+	<header class="fzhd-header">
+		<ul>
+			<li>纯电动</li>
+			<li>同城货的</li>
+		</ul>
+	</header>
+	<main>
+		<div class="input-box">
+			<ul>
+				<li>
+					<span>手机号</span>
+					<input type="text" placeholder="请输入手机号" name="tel" value="15913139061" />
+					<button>获取验证码</button>
+				</li>
+				<li>
+					<span>验证码</span>
+					<input type="text" placeholder="请输入验证码" name="check" />
+				</li>
+			</ul>
+		</div>
+		<div class="agreement">
+			<p>点击登陆即表示您已同意<mark>《方舟货的用户注册协议》</mark></p>
+		</div>
+		<div class="sign-in">
+			<button>登录</button>
+		</div>
+	</main>
+</body>
+</html>
