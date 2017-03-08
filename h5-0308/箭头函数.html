@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//箭头函数只能创建一个函数；当箭头函数中有多个返回值时，应加上｛｝；
+		// var aa = () => {
+		// 	console.log('haha');
+		// 	console.log('七彩炫光皮皮虾，我们走')
+		// }
+		// aa()；
+		var user = {
+			name:'孟浩然',
+			handle:function(){
+				setTimeout(function(){
+					console.log(this.name);//this指向调用者window
+				}.bind(this),2000)
+			}
+		}
+		// var user = {
+
+		// 	name:'孟浩然',
+		// 	handle:function(){
+		// 		setTimeout(() => console.log(this.name),2000)
+		// 	}
+		// }
+		user.handle();
+
+		//
+	</script>
+</body>
+</html>
